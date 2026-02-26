@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Exo+2:wght@300;400;500;600;700&family=Audiowide&display=swap" rel="stylesheet">
-    <link href="static/index.css" rel="stylesheet">
-
+    <link href="{% static 'index.css' %}" rel="stylesheet">
+    <link href="{% static 'index_team_intro.css' %}" rel="stylesheet">
 </head>
 <body> 
     <canvas id="neural-bg"></canvas>
@@ -39,13 +40,13 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1 style="font-family: 'Orbitron', sans-serif; color: #00ffff;">Reliable Linux, Cloud & Deployment Services by mosarafworld</h1>
-            <p style="font-size: 1.2rem; margin-top: 1rem;">I help startups, developers, and businesses deploy, secure, and maintain their applications with professional Linux and cloud solutions. From server setup to secure production deployments, I make your infrastructure stable, scalable, and ready for growth.</p>
-            <p style="margin-top: 1rem;">If you need a dependable system administrator who focuses on security, performance, and clean deployment — you are in the right place.</p>
-            <p style="margin-top: 1rem; font-weight: 600;">Let’s build your infrastructure the right way.</p>
-            <div style="margin-top: 2rem;">
+            <h1 style="font-family: 'Orbitron', sans-serif; color: #00ffff;">Reliable Linux, Cloud, Deployment & Cybersecurity Services by MosarafWorld</h1>
+            <p style="font-size: 1.2rem; margin-top: 1rem;">I help startups, developers, and growing businesses build secure, stable, and production-ready infrastructure. From Linux server setup and cloud configuration to secure deployments, hardening, and penetration testing, I ensure your systems are protected, scalable, and built for long-term growth.</p>
+            <p style="margin-top: 1rem;">Whether you need a dependable production environment, stronger security, or a clean deployment workflow, you’re in the right place. I focus on reliability, performance, and cybersecurity best practices so your applications stay fast, safe, and resilient.</p>
+            <p style="margin-top: 1rem; font-weight: 600;">Let’s build your infrastructure the right way — secure, scalable, and future-ready.</p>
+            <div class="hero-actions">
                 <a href="#contact" class="neural-btn">Contact Me</a>
-                <a href="#services" class="neural-btn" style="margin-left: 1rem;">View Services</a>
+                <a href="#services" class="neural-btn">View Services</a>
             </div>
         </div>
     </section>
@@ -75,7 +76,24 @@
             </div>
         </div>
     </section>
+    
+<section class="elite-wrapper">
+    <div class="elite-content">
+        <h2 class="section-title">Expect MOSARAF Talent</h2>
+        <p>We design, build, deploy, and secure digital solutions from initial development through global production rollout, ensuring systems are scalable, resilient, and ready for worldwide use. From cloud infrastructure and DevOps pipelines to full-stack applications, every solution is engineered for performance, reliability, and long-term growth.
 
+Our vetted security researchers and penetration testers bring world-class expertise to identify vulnerabilities, strengthen defenses, and protect applications, infrastructure, and sensitive data against modern cyber threats. Using industry-standard methodologies and real-world attack simulations, we help organizations build hardened, future-ready systems.
+
+Partner with professionals committed to operational excellence, secure architecture, and high-performance delivery — trusted to develop, deploy, and defend digital platforms on a global scale.
+</p>
+    <button onclick="window.open('https://www.linkedin.com/in/tech-india-570b90360/', '_blank')">LinkedIN</button>
+    </div>
+    <div class="elite-image">
+        <img src="{% static 'mw_image.jpg' %}" alt="mosarafworld Security Team">
+    </div>
+</section>
+
+</section>
     <section id="services" class="fade-in">
         <h2 class="section-title">Services Offered by mosarafworld</h2>
         <div class="projects-grid">
@@ -104,31 +122,28 @@
                 <p style="color: var(--text-secondary);">I perform penetration testing and bug bounty assessments to identify vulnerabilities and strengthen your Linux server security. This includes ethical hacking, vulnerability scanning, and providing actionable reports to help you secure your infrastructure.</p>
             </div>
         </div>
-        <div style="margin-top: 2rem;">
-            <p>Have a project in mind?<br>Contact me today and I will help you design a secure and reliable deployment solution.</p>
-        </div>
     </section>
 
     <section id="projects" class="fade-in">
         <h2 class="section-title">PROJECTS</h2>
         <div class="skills-container">
             <div class="skill-node">
-                <span>AI Integrate</span>
+                <span>AI N8N</span>
             </div>
             <div class="skill-node">
                 <span>Network</span>
             </div>
             <div class="skill-node">
-                <span>JavaScript</span>
+                <span>DevOps</span>
             </div>
             <div class="skill-node">
-                <span>Penetration <br>Testing</span>
+                <span>Deshboard</span>
             </div>
             <div class="skill-node">
-                <span>WebGL</span>
+                <span>Security</span>
             </div>
             <div class="skill-node">
-                <span>Three.js</span>
+                <span>Cloud</span>
             </div>
         </div>
     </section>
@@ -145,7 +160,7 @@
             <div class="form-group">
                 <textarea rows="5" placeholder="Your Message" required></textarea>
             </div>
-            <button type="submit" class="neural-btn">SEND MESSAGE</button>
+            <button type="submit" class="neural-btn">SEND</button>
         </form>
     </section>
 
@@ -198,7 +213,7 @@
         </div>
         
     </footer>
-<script src="static/index.js"></script>
-
+<script src="{% static 'index.js' %}"></script>
+<script src="{% static 'index_team_intro.js' %}"></script>
 </body>
 </html>
