@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-n+sd+y_umd_j2hkw#p6j0ad3tvsh@*u6j(1ehnyw*ibpn$+jyq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ["mosarafworld.online"]
 
 # Application definition
