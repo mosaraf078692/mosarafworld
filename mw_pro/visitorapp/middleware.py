@@ -1,5 +1,6 @@
 from .models import Visitor
 from .utils import get_ip, get_country, get_device_info
+from django.db.models import Q
 from datetime import date
 
 

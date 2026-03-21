@@ -2,3 +2,4 @@ django
 gunicorn
 whitenoise
 user-agents
+ipware
