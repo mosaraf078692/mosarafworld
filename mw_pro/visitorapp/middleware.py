@@ -14,27 +14,30 @@ class VisitorAnalyticsMiddleware:
 
         if ip:
 
-            country = get_country(ip)
+            # Check if the IP address already exists in the database
+            if not Visitor.objects.filter(Q(ip_address=ip)).exists():
 
-            browser, device = get_device_info(request)
+                country = get_country(ip)
 
-            path = request.path
+                browser, device = get_device_info(request)
 
-            today = date.today()
+                path = request.path
 
-            is_unique = not Visitor.objects.filter(
-                ip_address=ip,
-                visit_date=today
-            ).exists()
+                today = date.today()
 
-            Visitor.objects.create(
-                ip_address=ip,
-                country=country,
-                browser=browser,
-                device=device,
-                path=path,
-                is_unique=is_unique
-            )
+                is_unique = not Visitor.objects.filter(
+                    ip_address=ip,
+                    visit_date=today
+                ).exists()
+
+                Visitor.objects.create(
+                    ip_address=ip,
+                    country=country,
+                    browser=browser,
+                    device=device,
+                    path=path,
+                    is_unique=is_unique
+                )
 
         response = self.get_response(request)
 
