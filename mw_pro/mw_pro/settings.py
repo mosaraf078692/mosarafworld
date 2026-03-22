@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-n+sd+y_umd_j2hkw#p6j0ad3tvsh@*u6j(1ehnyw*ibpn$+jyq
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ["mosarafworld.online", "www.mosarafworld.online", "mosarafworld.local"]
+ALLOWED_HOSTS = ["mosarafworld.online", "www.mosarafworld.online", "mosarafworld.local", "192.168.31.61"]
 
 # Application definition
 
